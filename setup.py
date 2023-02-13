@@ -34,12 +34,13 @@ def get_requirements():
 def scripts(directory='bin/*') -> list:
     return glob.glob( directory )
 
-setup(name='met-utils',
+setup(name='met_utils',
       version= get_version(),
-      description='python utils and tools collection',
-      url='https://github.com/brugger/kbr-tools/',
+      description='python lib for met-api',
+      url='https://github.com:brugger/met_utils.git',
       author='Kim Brugger',
       author_email='kbr@brugger.dk',
+      packages=['met_utils'],
       license='MIT',
       install_requires=get_requirements(),
       classifiers=[
