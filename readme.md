@@ -38,7 +38,7 @@ print( "SN58900 location:",  met_utils.get_coordinates_by_id('SN58900', sensors_
 ### get_all_vestland_sensors(frost_api_id:str) -> DataFrame
 
 Returns a pandas dataframe with the sensor information
-In the case of api request errors function will raise an exception
+In the case of api request errors function will raise an exception and return the error message from the API call
 
 
 ### get_coordinates_by_id(id:str, sensors_df:DataFrame) -> List
