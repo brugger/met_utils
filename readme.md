@@ -1,15 +1,15 @@
 
 # Met-Utils
 
+Some example functions for the usage of the MET-API
 
 
-
-## Setup
+## Setup & installation
 
 First off create a API key to be access the frost API here:
 https://frost.met.no/auth/credentialsCreated.html. Note down both the ID and the secret.
 
-The easiest way to use the package is to install it in your environment
+Install the package into your environment
 
 ``` 
 pip install git+https://github.com/brugger/met_utils
@@ -38,12 +38,14 @@ print( "SN58900 location:",  met_utils.get_coordinates_by_id('SN58900', sensors_
 ### get_all_vestland_sensors(frost_api_id:str) -> DataFrame
 
 Returns a pandas dataframe with the sensor information
-In the case of api request errors will raise an exception
+In the case of api request errors function will raise an exception
 
 
 ### get_coordinates_by_id(id:str, sensors_df:DataFrame) -> List
 
-Will raise an exception in the case of 1. sensor id not in the dataframe, or 2. No coordinates for a sensor
+Returns the coordinates of a sensor as a list. 
+
+The function will raise an exception in the case of 1. sensor id not in the dataframe, or 2. Coordinates are missing for a sensor
 
 
 
