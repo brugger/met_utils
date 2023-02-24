@@ -15,7 +15,11 @@ def main():
     API_KEY = os.getenv('MET_KEY')
 
     df = met_utils.get_all_vestland_sensors(API_KEY)
-    #print( df )
+#    print( df )
+
+    for n in df['name']:
+        print( n )
+
 
     print( "SN58900 location:",  met_utils.get_coordinates_by_id('SN58900', df))
     try:
